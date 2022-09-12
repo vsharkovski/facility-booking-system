@@ -1,0 +1,21 @@
+# Should set logging level to ERROR on production, and INFO on dev / test
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/facilitybookingsystem
+    username: vlatko
+    password: vlatko
+  jpa:
+    hibernate:
+      dll-auto: validate
+    open-in-view: false
+  flyway:
+    locations:
+      - classpath:db/migration
+logging:
+  file:
+    path: fbs-api/logs
+easyRideShare:
+  app:
+    jwtCookieName: facilitybookingsystem
+    jwtSecret: secretkeytempqwhrnjkqnwewjfasfuiahzndsifqauwhdiwh
+    jwtExpirationMs: 86400000
