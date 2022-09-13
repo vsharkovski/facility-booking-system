@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface SlotSchemeRepository : JpaRepository<SlotScheme, Long> {
+    fun findAllByOrderByCreationTimeDesc(): List<SlotScheme>
 }

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface FacilityRepository : JpaRepository<Facility, Long> {
-
+    fun findAllByOrderByName(): List<Facility>
 }
