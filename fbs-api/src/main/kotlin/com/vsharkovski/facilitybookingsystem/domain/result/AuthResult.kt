@@ -2,7 +2,7 @@ package com.vsharkovski.facilitybookingsystem.domain
 
 interface AuthResult
 
-sealed interface AuthLoginResult
+sealed interface AuthLoginResult : AuthResult
 
 data class AuthLoginSuccess(
     val id: Long,
